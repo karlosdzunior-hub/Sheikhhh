@@ -1,0 +1,21 @@
+modules = ["python-3.12", "bash"]
+[agent]
+expertMode = true
+stack = "BEST_EFFORT_FALLBACK"
+
+[nix]
+channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+BOT_DOMAIN = "localhost"
+BOT_PORT = "5000"
+REDIS_HOST = "localhost"
+REDIS_PORT = "6379"
+REDIS_DB_NAME = "0"
+DB_NAME = "bot_database"
+LOG_LEVEL = "INFO"
+XUI_SUBSCRIPTION_PORT = "2096"
+XUI_SUBSCRIPTION_PATH = "/user/"
+SHOP_PAYMENT_YOOMONEY_ENABLED = "true"
