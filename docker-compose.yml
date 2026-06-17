@@ -51,6 +51,8 @@ services:
       poetry run python /app/__main__.py"
     depends_on:
       - redis
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.bot.rule=Host(`${BOT_DOMAIN}`)"
