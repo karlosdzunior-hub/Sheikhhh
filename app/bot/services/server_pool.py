@@ -66,6 +66,9 @@ class ServerPoolService:
         except Exception as exception:
             logger.error(f"Failed to fetch inbounds: {exception}")
             return None
+        if not inbounds:
+            logger.error("No inbounds found on server. Please create at least one inbound in the 3X-UI panel.")
+            return None
         return inbounds[0].id
 
     async def get_connection(self, user: User) -> Connection | None:
