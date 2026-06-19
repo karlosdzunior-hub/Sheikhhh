@@ -30,7 +30,7 @@ class ServerPoolService:
                 username=self.config.xui.USERNAME,
                 password=self.config.xui.PASSWORD,
                 token=self.config.xui.TOKEN,
-                # use_tls_verify=False,
+                use_tls_verify=False,
                 logger=logging.getLogger(f"xui_{server.name}"),
             )
             try:
